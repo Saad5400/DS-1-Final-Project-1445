@@ -122,6 +122,11 @@ public class App {
             System.out.print("Enter an equation or \"exit\" to exit: ");
             input = systemScanner.nextLine();
 
+            if (input.equals("exit")) {
+                System.out.println("exiting program ...");
+                break;
+            }
+
             System.out.println("\n1. Making sure there is one space between each operand and operator ...");
             input = cleanInput(input);
             System.out.println("Done: " + input);
@@ -150,6 +155,7 @@ public class App {
             }
             System.out.println("Done: " + result);
         } while (input != "exit");
+        System.out.println("\nThank you for using the Expression Tree Generator, program closed.");
         systemScanner.close();
     }
 }
