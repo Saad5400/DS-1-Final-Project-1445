@@ -17,6 +17,7 @@ public class App {
                 return 1;
             case "*":
             case "/":
+            case "%":
                 return 2;
         }
         return -1;
@@ -47,7 +48,7 @@ public class App {
                 }
             }
             // If next one of the following operators: +, -, *, /
-            else if (next.matches("[\\+\\-\\*\\/]")) {
+            else if (next.matches("[\\+\\-\\*\\/\\%]")) {
                 while (!stack.isEmpty() && getPrecedence(stack.peek()) >= getPrecedence(next)) {
                     postfix += stack.pop() + " ";
                 }
@@ -76,7 +77,7 @@ public class App {
                 stack.push(new TreeNode<>(next));
             }
             // If next one of the following operators: +, -, *, /
-            else if (next.matches("[\\+\\-\\*\\/]")) {
+            else if (next.matches("[\\+\\-\\*\\/\\%]")) {
                 TreeNode<String> right = stack.pop();
                 TreeNode<String> left = stack.pop();
                 stack.push(new TreeNode<>(next, left, right));
@@ -107,6 +108,11 @@ public class App {
                     throw new RuntimeException("Cannot divide by zero");
                 }
                 return left / right;
+            case "%":
+                if (right == 0) {
+                    throw new RuntimeException("Cannot divide by zero");
+                }
+                return left % right;
         }
         return 0;
     }
