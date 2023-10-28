@@ -117,7 +117,7 @@ public class App {
 
         System.out.println("Welcome to the Expression Tree Generator");
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Enter an equation or \"exit\" to exit: ");
             input = systemScanner.nextLine();
@@ -154,7 +154,7 @@ public class App {
                 continue;
             }
             System.out.println("Done: " + result);
-        } while (input != "exit");
+        }
         System.out.println("\nThank you for using the Expression Tree Generator, program closed.");
         systemScanner.close();
     }
