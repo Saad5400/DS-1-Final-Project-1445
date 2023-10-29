@@ -1,3 +1,16 @@
+/*
+ * Building a Tree-Based Calculator Project for Practical Data Structures
+ * Dr. عبدالباسط عبدالعزيز حميده قدح
+ * 
+ * Group number: 2
+ * Group members:
+ * - سعد نور بتوا 444004616
+ * - عبدالرحمن فارس منصر 444000076
+ * - عبدالرحمن عمر باسيف 444004638
+ * - احمد عبدالرحمن دوبي 443005399
+ * - حسين هاني الصائغ 444004253
+ */
+
 import java.util.Scanner;
 
 public class App {
