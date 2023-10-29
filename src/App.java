@@ -150,6 +150,7 @@ public class App {
             TreeNode<String> root = generateExpressionTree(input);
             System.out.println("Done");
             root.printTree();
+            System.out.println("Tree size: " + root.size());
 
             System.out.println("\n4. Evaluating expression tree ...");
             double result;

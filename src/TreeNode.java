@@ -34,6 +34,17 @@ public class TreeNode<E> {
         printTree(node.left, level + 1);
     }
 
+    public int size() {
+        return size(this);
+    }
+
+    private int size(TreeNode<E> node) {
+        if (node == null) {
+            return 0;
+        }
+        return 1 + size(node.left) + size(node.right);
+    }
+
     public E getData() {
         return data;
     }
